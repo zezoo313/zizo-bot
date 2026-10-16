@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: zizo-whatsapp-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: VERIFY_TOKEN
+        value: zizo_secret_verify_token_2026
+      - key: STORE_NAME
+        value: متجر زيزو
+      - key: STORE_URL
+        value: https://rolemall.com/pYCsO5oshop
+      - key: STORE_PHONE
+        value: 07765496038
+      - key: STORE_PHONE_INTL
+        value: 9647765496038
+      - key: NOTIFICATION_EMAIL
+        value: dandana600@gmail.com
+      - key: SHIPPING_BAGHDAD
+        value: 5000
+      - key: SHIPPING_GOVERNORATES
+        value: 6000
